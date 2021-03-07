@@ -4,11 +4,11 @@
 
 [![prantlf/geckodriver-headless](http://dockeri.co/image/prantlf/geckodriver-headless)](https://hub.docker.com/repository/docker/prantlf/geckodriver-headless/)
 
-[This image] is supposed to help testing browser applications in [headless Firefox] driven by `geckodriver`. This image is built automatically on the top of the tag `latest` from the [Alpine repository], so that it is always based on the latest [Alpine Linux]. [Firefox] and `geckodriver` have to be updated from time to time by triggering a new build manually.
+[This image] is supposed to help testing browser applications in [headless Firefox] driven by [`geckodriver`]. This image is built automatically on the top of the tag `latest` from the [Alpine repository], so that it is always based on the latest [Alpine Linux]. [Firefox] and `geckodriver` have to be updated from time to time by triggering a new build manually.
 
 ## Tags
 
-- [`latest`]
+- [`latest`], `85`
 
 ## Install
 
@@ -69,33 +69,22 @@ you can append to the statement running the dockjer container:
 
 The local image is built as `geckodriver-headless` and pushed to the docker hub with the tag `prantlf/geckodriver-headless:latest`.
 
-Remove an old local image:
-
+    # Remove an old local image:
     make clean
-
-Build and tag new local images:
-
+    # Build and tag new local images:
     make build
-
-Enter an interactive shell inside the latest created image:
-
+    # Enter an interactive shell inside the latest created image:
     make shell
-
-Tag the local image for pushing:
-
+    # Tag the local image for pushing:
     make tag
-
-Login to the docker hub:
-
+    # Login to the docker hub:
     make login
-
-Push the local image to the docker hub:
-
+    # Push the local image to the docker hub:
     make push
 
 ## License
 
-Copyright (c) 2020 Ferdinand Prantl
+Copyright (c) 2019-2021 Ferdinand Prantl
 
 Licensed under the MIT license.
 
@@ -103,6 +92,7 @@ Licensed under the MIT license.
 [This image]: https://hub.docker.com/repository/docker/prantlf/geckodriver-headless
 [`latest`]: https://hub.docker.com/repository/docker/prantlf/geckodriver-headless/tags
 [headless Firefox]: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode
+[`geckodriver`]: https://github.com/mozilla/geckodriver#readme
 [Firefox]: https://www.mozilla.org/firefox/
 [Alpine Linux]: https://alpinelinux.org/
 [docker-compose]: https://docs.docker.com/compose/
