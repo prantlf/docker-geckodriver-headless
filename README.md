@@ -6,9 +6,11 @@
 
 [This image] is supposed to help testing browser applications in [headless Firefox] driven by [`geckodriver`]. This image is built automatically on the top of the tag `latest` from the [Alpine repository], so that it is always based on the latest [Alpine Linux]. [Firefox] and `geckodriver` have to be updated from time to time by triggering a new build manually.
 
+If you have trouble pulling the image from the Docker's default hub.docker.com, try gitlab.com, where [this project] is primarily maintained: `registry.gitlab.com/prantlf/docker-geckodriver-headless`.
+
 ## Tags
 
-- [`latest`], `85`
+- [`latest`], `89`, `85`
 
 ## Install
 
@@ -90,6 +92,7 @@ Licensed under the MIT license.
 
 [Docker]: https://www.docker.com/
 [This image]: https://hub.docker.com/repository/docker/prantlf/geckodriver-headless
+[this project]: https://gitlab.com/prantlf/docker-geckodriver-headless#prantlfgeckodriver-headless
 [`latest`]: https://hub.docker.com/repository/docker/prantlf/geckodriver-headless/tags
 [headless Firefox]: https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Headless_mode
 [`geckodriver`]: https://github.com/mozilla/geckodriver#readme
