@@ -2,8 +2,6 @@
 
 [Docker] image: Firefox and GeckoDriver for headless tests on Alpine Linux
 
-[![prantlf/geckodriver-headless](http://dockeri.co/image/prantlf/geckodriver-headless)](https://hub.docker.com/repository/docker/prantlf/geckodriver-headless/)
-
 [This image] is supposed to help testing browser applications in [headless Firefox] driven by [`geckodriver`]. This image is built automatically on the top of the tag `latest` from the [Alpine repository], so that it is always based on the latest [Alpine Linux]. [Firefox] and `geckodriver` have to be updated from time to time by triggering a new build manually.
 
 If you have trouble pulling the image from the Docker's default hub.docker.com, try gitlab.com, where [this project] is primarily maintained: `registry.gitlab.com/prantlf/docker-geckodriver-headless`.
@@ -86,7 +84,7 @@ The local image is built as `geckodriver-headless` and pushed to the docker hub 
 
 ## License
 
-Copyright (c) 2019-2021 Ferdinand Prantl
+Copyright (c) 2019-2022 Ferdinand Prantl
 
 Licensed under the MIT license.
 
