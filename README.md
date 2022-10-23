@@ -8,7 +8,7 @@ If you have trouble pulling the image from the Docker's default hub.docker.com, 
 
 ## Tags
 
-- [`latest`], `89`, `85`
+- [`latest`], `101`, `89`, `85`
 
 ## Install
 
@@ -75,8 +75,6 @@ The local image is built as `geckodriver-headless` and pushed to the docker hub 
     make build
     # Enter an interactive shell inside the latest created image:
     make shell
-    # Tag the local image for pushing:
-    make tag
     # Login to the docker hub:
     make login
     # Push the local image to the docker hub:

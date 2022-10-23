@@ -1,5 +1,5 @@
 clean ::
-	docker image rm geckodriver-headless
+	docker image rm geckodriver-headless prantlf/geckodriver-headless registry.gitlab.com/prantlf/docker-geckodriver-headless
 
 lint ::
 	docker run --rm -i \
@@ -9,6 +9,8 @@ lint ::
 
 build ::
 	docker build -t geckodriver-headless .
+	docker tag geckodriver-headless prantlf/geckodriver-headless
+	docker tag geckodriver-headless registry.gitlab.com/prantlf/docker-geckodriver-headless
 
 shell ::
 	docker run --rm -it --entrypoint=busybox geckodriver-headless sh
@@ -25,11 +27,17 @@ stop ::
 show ::
 	docker logs geckodriver
 
-tag ::
-	docker tag geckodriver-headless prantlf/geckodriver-headless:latest
-
 login ::
 	docker login --username=prantlf
+	docker login registry.gitlab.com --username=prantlf
+
+pull ::
+	docker pull prantlf/geckodriver-headless
+	docker pull registry.gitlab.com/prantlf/docker-geckodriver-headless
 
 push ::
-	docker push prantlf/geckodriver-headless:latest
+	docker push prantlf/geckodriver-headless
+	docker tag prantlf/geckodriver-headless prantlf/geckodriver-headless:101
+	docker push prantlf/geckodriver-headless:101
+	docker tag registry.gitlab.com/prantlf/docker-geckodriver-headless registry.gitlab.com/prantlf/docker-geckodriver-headless:101
+	docker push registry.gitlab.com/prantlf/docker-geckodriver-headless:101
